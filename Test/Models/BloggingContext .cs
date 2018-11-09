@@ -13,11 +13,10 @@ namespace Test.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
-           // modelBuilder.Entity<Post>()
-           //.HasOne(p => p.Blog)
-           //.WithMany(b => b.Posts)
-           //.HasForeignKey(p => p.BlogId);
+            modelBuilder.Entity<Post>()
+           .HasOne(p => p.Blog)
+           .WithMany()
+           .HasForeignKey(p => p.BlogId);
         }
     }
 }
